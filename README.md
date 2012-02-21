@@ -14,11 +14,11 @@ Wendell lets you parse command line arguments based on commands with options.
 
 ```javascript
 
-    var wendell = new Wendell({ "bin": "battlecruiser" });
+var wendell = new Wendell({ "bin": "battlecruiser" });
 
-    wendell.command('start', function(options, component) {
-        console.log('  -> Starting battlecruiser ' + component);
-    });
+wendell.command('start', function(options, component) {
+    console.log('  -> Starting battlecruiser ' + component);
+});
 
 ```
 

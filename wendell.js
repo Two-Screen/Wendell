@@ -74,7 +74,7 @@ Wendell.prototype.execute = function(command, opts, args) {
     var applied = [opts].concat(args);
 
     // Apply the arguments to the command `exec` function
-    cmd.exec.apply(cmd, applied);
+    cmd.exec.apply(this, applied);
 };
 
 /**
@@ -90,7 +90,7 @@ Wendell.prototype.order = function() {
 
     // Check for help and version options, these are special cases
     if (0 <= ['-h', '--help'].indexOf(command)) {
-        return this.help();
+        return this.help(args.shift());
     }
     else if (0 <= ['-v', '--version'].indexOf(command)) {
         return this.version();
@@ -99,15 +99,15 @@ Wendell.prototype.order = function() {
     // Check for proper usage
     if (!command) {
         this.print(['No command given.', '']);
-        return this.help();
+        return this.help(args.shift());
     }
     else if (0 === command.indexOf('-')) {
         this.print(['Options must be specified after the command.', '']);
-        return this.help();
+        return this.help(args.shift());
     }
     else if (!this.commands[command]) {
         this.print(['Command "' + command + '" not understood.', '']);
-        return this.help();
+        return this.help(args.shift());
     }
 
     return this.execute(command, options, args);
@@ -127,24 +127,31 @@ Wendell.prototype.help = function(command) {
         lines.push(this.title, '');
     }
 
-    // Usage line
-    lines.push('Usage: ' + this.usage, '');
+    if (command) {
+        // Command specific usage
+        var cmd = this.commands[command];
+        lines.push("Usage: " + this.bin + " " + cmd.usage, "");
+    }
+    else {
+        // General usage
+        lines.push('Usage: ' + this.usage, '');
 
-    // Check if we need to add commands to the help output
-    var commands    = this.commands;
-    var commandKeys = Object.keys(this.commands);
-    if (0 < commandKeys.length) {
-        lines.push('Commands:');
-        commandKeys.forEach(function(key) {
-            var command = commands[key];
-            var line = '    ' + key;
-            if (command.description) {
-                line += '     # ' + command.description;
-            }
-            lines.push(line);
-        });
+        // Check if we need to add commands to the help output
+        var commands    = this.commands;
+        var commandKeys = Object.keys(this.commands);
+        if (0 < commandKeys.length) {
+            lines.push('Commands:');
+            commandKeys.forEach(function(key) {
+                var command = commands[key];
+                var line = '    ' + key;
+                if (command.description) {
+                    line += '     # ' + command.description;
+                }
+                lines.push(line);
+            });
 
-        lines.push('', "Use '" + this.bin + " --help <command>' for command specific help");
+            lines.push('', "Use '" + this.bin + " --help <command>' for command specific help");
+        }
     }
 
     this.print(lines);
