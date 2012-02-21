@@ -1,0 +1,17 @@
+{
+  "name":           "wendell",
+  "description":    "Command based argument parser",
+  "version":        "0.0.1",
+  "author":         "Mattijs Hoitink <mattijs@monkeyandmachine.com>",
+  "keywords":       ["cli", "command", "parser"],
+  "license":        "MIT",
+  "repository":     "git@github.com:Two-Screen/wendell.git",
+  "engines": {
+        "node": ">=0.6"
+  },
+  "dependencies":   {
+        "nopt":     "*"
+  },
+  "main":           "./index"
+}
+
