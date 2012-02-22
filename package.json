@@ -5,7 +5,11 @@
   "author":         "Mattijs Hoitink <mattijs@monkeyandmachine.com>",
   "keywords":       ["cli", "command", "parser"],
   "license":        "MIT",
-  "repository":     "git@github.com:Two-Screen/wendell.git",
+  "homepage":       "https://github.com/two-screen/wendell",
+  "repository": {
+      "type":   "git",
+      "url":    "git@github.com:Two-Screen/wendell.git"
+  },
   "engines": {
         "node": ">=0.6"
   },
