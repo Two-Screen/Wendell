@@ -1,11 +1,11 @@
 /**
  * wendell.js
  *
- * Sergeant Wendell Sovens was an early Crucio siege tank operator, and installed a sophisticated
- * surround-sound system into his tank. As a result, he was cut off and surrounded when he failed
- * to hear the order to fall back. [1]
+ *  > Sergeant Wendell Sovens was an early Crucio siege tank operator, and installed a sophisticated
+ *  > surround-sound system into his tank. As a result, he was cut off and surrounded when he failed
+ *  > to hear the order to fall back.
  *
- * [1](http://starcraft.wikia.com/wiki/Wendell_Sovens)
+ * - (http://starcraft.wikia.com/wiki/Wendell_Sovens)
  *
  * @author      Mattijs Hoitink <mattijs@monkeyandmachine.com>
  * @copyright   2012, Two Screen
@@ -46,8 +46,11 @@ Wendell.prototype.print = function(lines) {
         throw new Error('Lines must be an Array or String');
     }
 
+    var date, time, bin = this.bin;
     lines.forEach(function(line) {
-        console.log(line);
+        date = new Date();
+        time = [date.getHours(), date.getMinutes(), date.getSeconds()].join(':');
+        console.log('[' + bin + ']', time, line);
     });
 
     return this;
