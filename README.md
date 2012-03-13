@@ -7,13 +7,6 @@
 [1] [http://starcraft.wikia.com/wiki/Wendell_Sovens](http://starcraft.wikia.com/wiki/Wendell_Sovens)
 
 
-## Resources
-- https://bitbucket.org/panzi/javascript-utils/src/a6e6d56d4227/optparse/optparse.js
-- https://github.com/jpolo/node-argparse
-- https://github.com/isaacs/arg-parse-js
-- https://github.com/jfd/optparse-js
-- https://gist.github.com/982499
-
 ## Description
 
 Wendell lets you parse command line arguments based on commands with options.
@@ -48,6 +41,14 @@ wendell.command('start', function(options, component) {
 
     $ npm install
     $ make test
+
+## Inspiration
+
+- https://bitbucket.org/panzi/javascript-utils/src/a6e6d56d4227/optparse/optparse.js
+- https://github.com/jpolo/node-argparse
+- https://github.com/isaacs/arg-parse-js
+- https://github.com/jfd/optparse-js
+- https://gist.github.com/982499
 
 ## License
 
