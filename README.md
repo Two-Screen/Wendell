@@ -9,15 +9,19 @@
 
 ## Description
 
-Wendell lets you parse command line arguments based on commands with options.
+Wendell is an argument parser based on commands. It assumes arguments contain commands that 
+can be executed with options and arguments.
 
 ## Synopsis
 
 ```javascript
 
-var wendell = new Wendell({ "bin": "battlecruiser" });
+var wendell = require('wendell'),
+    parser  = new wendell.CommandParser({
+        "bin": "battlecruiser"
+    });
 
-wendell.command('start', function(options, component) {
+parser.command('start', function(options, component) {
     console.log('  -> Starting battlecruiser ' + component);
 });
 
@@ -41,14 +45,6 @@ wendell.command('start', function(options, component) {
 
     $ npm install
     $ make test
-
-## Inspiration
-
-- https://bitbucket.org/panzi/javascript-utils/src/a6e6d56d4227/optparse/optparse.js
-- https://github.com/jpolo/node-argparse
-- https://github.com/isaacs/arg-parse-js
-- https://github.com/jfd/optparse-js
-- https://gist.github.com/982499
 
 ## License
 
