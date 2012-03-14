@@ -1,0 +1,15 @@
+help option | id:20a6ebb7f3ba95b4ad790f4e3a739e1ce4e036bd
+CommandParser API docs | id:22de9375fec60f4302a179f6ea6b0829541e19a4
+README with proper examples | id:25791094ac644a5a1b02588cb2c6113a500ea314
+Add output printer/formatter | id:2aeecc711216c13f029675700680d196091b90c2
+write tests | id:4380284ab577fc4cbd80bb040587b1b4861d33c3
+Implement actions properly | id:5d833261d088bb098c5fa033891e6bf7724ae7f0
+Option API docs | id:980601e509445d12f6ec4392e935a35e5901b62a
+Command API docs | id:a3a2fc01c202b8b34507efef95877faefe3817be
+version option | id:aed201d625995b632e633697f91e6326d6817c9c
+Add Command parent reference | id:af1598e8d5b87272456315c6b19a2cc456c14f24
+Publish to npm | id:b1aa195e794b4f66b923622c595d29c04615285a
+Usage website on gh-pages | id:b5ec54875a448daadd595cf50cee888ab5a30b67
+Implement option parsing without nopt | id:bcdc7c215929eed2d6a2f682383a4061bd0e3e68
+Support Option dest parameter | id:c7bb137b088c8f0ba1466f7e96d0695df9ffc674
+Fix help and version options for CommandParser | id:efccb0f72792f8a66a821ecbdd2bdc91c213d909
