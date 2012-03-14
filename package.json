@@ -19,6 +19,6 @@
         "nopt":              ">=1",
         "tap":               ">=0.2"
   },
-  "main":           "./index"
+  "main":           "./lib/index"
 }
 
