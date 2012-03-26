@@ -1,7 +1,7 @@
 {
   "name":           "wendell",
   "description":    "Command based argument parser",
-  "version":        "0.2.0",
+  "version":        "0.2.1",
   "author":         "Mattijs Hoitink <mattijs@monkeyandmachine.com>",
   "keywords":       ["cli", "command", "parser"],
   "license":        "MIT",
