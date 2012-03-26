@@ -6,6 +6,7 @@ write tests | id:4380284ab577fc4cbd80bb040587b1b4861d33c3
 Implement actions properly | id:5d833261d088bb098c5fa033891e6bf7724ae7f0
 Option API docs | id:980601e509445d12f6ec4392e935a35e5901b62a
 Command API docs | id:a3a2fc01c202b8b34507efef95877faefe3817be
+infer usage from command/option | id:a3cfac4ed163d52d23e49826ba80c66ed42278bc
 version option | id:aed201d625995b632e633697f91e6326d6817c9c
 Add Command parent reference | id:af1598e8d5b87272456315c6b19a2cc456c14f24
 Publish to npm | id:b1aa195e794b4f66b923622c595d29c04615285a
